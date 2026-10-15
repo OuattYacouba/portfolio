@@ -214,6 +214,8 @@ window.T = {
     archTitle: 'Architecture des données',
     archLead: 'Les données passent par trois couches, du brut au prêt-à-analyser, stockées en Parquet, avant la restitution.',
     deliverables: 'Livrables', resultsTitle: 'Résultats', stackTitle: 'Stack',
+    zoomHint: 'Cliquer pour agrandir', zoomOpen: 'Agrandir la capture', zoomClose: 'Fermer',
+    zoomPrev: 'Capture précédente', zoomNext: 'Capture suivante', zoomIn: 'Taille réelle', zoomOut: "Ajuster à l'écran",
     dashboard: 'Voir le dashboard',
     footer: 'Data Analyst · Portfolio 2026', backTop: 'Haut de page ↑'
   },
@@ -243,6 +245,8 @@ window.T = {
     archTitle: 'Data architecture',
     archLead: 'Data moves through three layers, from raw to analysis-ready, stored as Parquet, before delivery.',
     deliverables: 'Deliverables', resultsTitle: 'Outcomes', stackTitle: 'Stack',
+    zoomHint: 'Click to enlarge', zoomOpen: 'Enlarge the screenshot', zoomClose: 'Close',
+    zoomPrev: 'Previous screenshot', zoomNext: 'Next screenshot', zoomIn: 'Actual size', zoomOut: 'Fit to screen',
     dashboard: 'Open the dashboard',
     footer: 'Data Analyst · Portfolio 2026', backTop: 'Back to top ↑'
   }

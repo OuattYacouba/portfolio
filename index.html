@@ -177,6 +177,19 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <dialog class="lightbox" id="lightbox" aria-label="Capture">
+    <div class="lb-bar">
+      <span class="lb-count" id="lbCount"></span>
+      <span class="lb-actions">
+        <button type="button" class="lb-btn" id="lbZoom"></button>
+        <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Fermer">✕</button>
+      </span>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Capture précédente">‹</button>
+    <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Capture suivante">›</button>
+  </dialog>
+
   <noscript>
     <p style="max-width:640px;margin:40px auto;padding:0 24px">Ce portfolio nécessite JavaScript. Contact : <a href="mailto:ouattara.yacouba111@gmail.com">ouattara.yacouba111@gmail.com</a> — <a href="assets/CV-Yacouba-Ouattara.pdf">télécharger le CV</a>.</p>
   </noscript>

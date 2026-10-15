@@ -147,6 +147,69 @@ window.PROJECTS = [
     }
   },
   {
+    id: 'ads-performance',
+    dashboard: { tool: 'Looker Studio', url: 'https://datastudio.google.com/reporting/ff99f86a-fe0f-4479-8b3c-7da647d3abd7' },
+    repo: '',
+    tags: ['Looker Studio', 'Marketing analytics'],
+    hasPipeline: false,
+    shots: ['projects/ads-1.png', 'projects/ads-2.png', 'projects/ads-3.png', 'projects/ads-4.png', 'projects/ads-5.png'],
+    stack: ['Looker Studio', 'Champs calculés', 'Filtres interactifs', 'Dataset Kaggle'],
+    fr: {
+      kicker: 'Projet personnel · Looker Studio',
+      title: 'Performance publicitaire multi-plateformes 2024',
+      summary: "Rapport Looker Studio de 5 pages sur 11,1 M$ de dépenses publicitaires Google Ads, Meta Ads et TikTok Ads : efficacité par plateforme, campagne, industrie, pays et mois.",
+      context: "Comparer l'efficacité des investissements publicitaires de 2024 sur trois plateformes, quatre types de campagne, cinq industries et sept pays, à partir d'un jeu de données public (Kaggle), pour savoir où chaque dollar investi rapporte le plus.",
+      steps: [
+        { n: '01', title: 'Préparation', body: 'Import du jeu de données Kaggle, typage des dates et des montants, champs calculés pour le CTR, le CPC, le CPA et le ROAS.' },
+        { n: '02', title: 'Vue globale', body: 'Cartes KPI — impressions, clics, conversions, dépenses, ROAS — et filtres campagne, plateforme, industrie, pays et période sur chaque page.' },
+        { n: '03', title: 'Analyses', body: 'Comparatif des plateformes, heatmap du ROAS par industrie et plateforme, CPA par type de campagne, carte mondiale et classement des pays.' },
+        { n: '04', title: 'Tendances', body: 'Évolution mensuelle du ROAS, des dépenses, du coût par clic, du taux de clic et des conversions.' }
+      ],
+      glossary: [
+        { term: 'Impressions', def: "Nombre de fois où une annonce s'est affichée à l'écran d'un internaute.", example: '2024 : 185,3 millions d’affichages.' },
+        { term: 'CTR — taux de clic', formula: 'Clics ÷ Impressions', def: "Part des affichages qui donnent lieu à un clic : mesure l'attrait de l'annonce.", example: '2024 : 3,8 % — environ 4 clics pour 100 affichages.' },
+        { term: 'CPC — coût par clic', formula: 'Dépenses ÷ Clics', def: 'Prix moyen payé pour amener un internaute sur le site. Plus il est bas, mieux c’est.', example: '2024 : 1,56 $ par clic.' },
+        { term: 'Taux de conversion', formula: 'Conversions ÷ Clics', def: "Part des clics qui aboutissent à l'action visée : achat, inscription, demande de démo…", example: '2024 : 4,6 % des clics deviennent une conversion.' },
+        { term: 'CPA — coût par acquisition', formula: 'Dépenses ÷ Conversions', def: 'Ce que coûte en publicité une conversion. Plus il est bas, mieux c’est.', example: '2024 : 34 $ par conversion.' },
+        { term: 'ROAS — retour sur dépense publicitaire', formula: 'Revenu ÷ Dépenses', def: "Revenu généré pour chaque dollar investi. C'est un ratio, pas un montant : au-dessus de 1, la publicité rapporte plus de revenu qu'elle ne coûte.", example: '2024 : 4,9 — 1 $ investi a généré 4,90 $ de revenu.' }
+      ],
+      results: [
+        'TikTok Ads représente 24 % des dépenses mais 37 % du revenu ; Google Ads absorbe 57 % des dépenses pour 41 % du revenu.',
+        "Sur l'année : 54,2 M$ de revenu pour 11,1 M$ investis, soit un ROAS de 4,9.",
+        'Un coût moyen de 34 $ par conversion et de 1,56 $ par clic, pour un taux de clic de 3,8 %.',
+        "L'Inde offre le meilleur ROAS (5,5) et le CPA le plus bas (30,76 $) ; les États-Unis, premier poste de dépense, le ROAS le plus faible (4,16).",
+        "Ratios recalculés sur les totaux (revenu total ÷ dépense totale) : la moyenne des ROAS ligne à ligne donnait 6,45, soit 32 % de trop."
+      ]
+    },
+    en: {
+      kicker: 'Personal project · Looker Studio',
+      title: 'Multi-platform advertising performance 2024',
+      summary: 'A five-page Looker Studio report on $11.1M of Google Ads, Meta Ads and TikTok Ads spend: efficiency by platform, campaign, industry, country and month.',
+      context: 'Comparing how efficiently 2024 ad budgets performed across three platforms, four campaign types, five industries and seven countries, using a public Kaggle dataset, to see where each dollar earns the most.',
+      steps: [
+        { n: '01', title: 'Preparation', body: 'Imported the Kaggle dataset, typed dates and amounts, and built calculated fields for CTR, CPC, CPA and ROAS.' },
+        { n: '02', title: 'Overview', body: 'KPI scorecards — impressions, clicks, conversions, spend, ROAS — with campaign, platform, industry, country and date filters on every page.' },
+        { n: '03', title: 'Analysis', body: 'Platform comparison, ROAS heatmap by industry and platform, CPA by campaign type, world map and country ranking.' },
+        { n: '04', title: 'Trends', body: 'Monthly change in ROAS, spend, cost per click, click-through rate and conversions.' }
+      ],
+      glossary: [
+        { term: 'Impressions', def: 'How many times an ad was displayed on someone’s screen.', example: '2024: 185.3 million impressions.' },
+        { term: 'CTR — click-through rate', formula: 'Clicks ÷ Impressions', def: 'Share of impressions that lead to a click: how appealing the ad is.', example: '2024: 3.8% — about 4 clicks per 100 impressions.' },
+        { term: 'CPC — cost per click', formula: 'Spend ÷ Clicks', def: 'Average price paid to bring one visitor to the site. Lower is better.', example: '2024: $1.56 per click.' },
+        { term: 'Conversion rate', formula: 'Conversions ÷ Clicks', def: 'Share of clicks that end in the target action: purchase, sign-up, demo request…', example: '2024: 4.6% of clicks convert.' },
+        { term: 'CPA — cost per acquisition', formula: 'Spend ÷ Conversions', def: 'Advertising cost of one conversion. Lower is better.', example: '2024: $34 per conversion.' },
+        { term: 'ROAS — return on ad spend', formula: 'Revenue ÷ Spend', def: 'Revenue generated for each dollar spent. It is a ratio, not an amount: above 1, advertising brings in more revenue than it costs.', example: '2024: 4.9 — every $1 spent generated $4.90 in revenue.' }
+      ],
+      results: [
+        'TikTok Ads takes 24% of spend but delivers 37% of revenue; Google Ads absorbs 57% of spend for 41% of revenue.',
+        'Over the year: $54.2M in revenue for $11.1M spent, a ROAS of 4.9.',
+        'An average cost of $34 per conversion and $1.56 per click, with a 3.8% click-through rate.',
+        'India has the best ROAS (5.5) and the lowest CPA ($30.76); the US, the largest spend, has the weakest ROAS (4.16).',
+        'Ratios computed from totals (total revenue ÷ total spend): averaging row-level ROAS gave 6.45, overstating it by 32%.'
+      ]
+    }
+  },
+  {
     id: 'modele',
     draft: true, // ← fiche modèle : copie-la, change l'id, remplis-la et retire cette ligne
     dashboard: { tool: 'Power BI', url: '' },

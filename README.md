@@ -13,6 +13,7 @@ Portfolio bilingue (français / anglais) qui présente mes projets data sous for
 | Pilotage de la performance et aide à la décision | Python, Pandas, Scikit-Learn, Streamlit, Plotly, LLM (Gemini) |
 | Automatisation du reporting financier | ERP Odoo, Excel avancé, Power Query |
 | Tableau de bord des ventes e-commerce | Excel, Power Pivot, modèle de données, CUBEVALUE |
+| Performance publicitaire multi-plateformes 2024 | Looker Studio, champs calculés — [voir le rapport](https://datastudio.google.com/reporting/ff99f86a-fe0f-4479-8b3c-7da647d3abd7) |
 
 ## Le site
 

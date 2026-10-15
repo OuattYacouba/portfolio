@@ -5,9 +5,9 @@
 
 /* 1. Tes liens. Laisse '' pour masquer un lien tant qu'il n'existe pas. */
 window.CONFIG = {
-  github: '',            // ex. 'https://github.com/yacouba-ouattara'
-  linkedin: '',          // ex. 'https://www.linkedin.com/in/yacouba-ouattara'
-  credly: '',            // lien de vérification du badge AWS (Credly), ex. 'https://www.credly.com/badges/xxxx'
+  github: 'https://github.com/OuattYacouba',
+  linkedin: 'https://www.linkedin.com/in/yacouba-ouattara-b7156a178/',
+  credly: 'https://www.credly.com/badges/47d08d54-0975-4237-b7bd-7647e386cff7/public_url', // vérification du badge AWS
   defaultLang: 'fr',     // 'fr' ou 'en'
   showNotes: false       // passe à true quand tu auras écrit tes articles de veille
 };
@@ -104,6 +104,49 @@ window.PROJECTS = [
     }
   },
   {
+    id: 'dashboard-ventes',
+    dashboard: { tool: 'Excel', url: '' },
+    repo: '',
+    tags: ['Excel', 'Power Pivot', 'Data quality'],
+    hasPipeline: false,
+    shots: ['projects/ventes-performance.png', 'projects/ventes-panier.png', 'projects/ventes-qualite.png'],
+    stack: ['Excel avancé', 'Power Pivot', 'Modèle de données', 'Tableaux croisés dynamiques', 'CUBEVALUE', 'Segments'],
+    fr: {
+      kicker: 'Projet personnel · Excel & Power Pivot',
+      title: 'Tableau de bord des ventes e-commerce',
+      summary: "Tableau de bord Excel sur 41 742 commandes et 233 210 lignes de vente : performance du mois, répartition online / offline, analyse du panier et contrôle qualité des données.",
+      context: "Suivre l'activité d'une boutique en ligne de produits dérivés Google sur l'année 2017 : savoir comment évoluent les ventes d'un mois sur l'autre, ce que pèse chaque canal (online / offline) et chaque catégorie, et comment se comporte le panier moyen.",
+      steps: [
+        { n: '01', title: 'Modélisation', body: "Deux tables — commandes et détail des commandes — reliées par l'ID de transaction dans le modèle de données Power Pivot." },
+        { n: '02', title: 'Indicateurs', body: 'Ventes, part online / offline, panier moyen, produits par commande et évolution par rapport au mois précédent, calculés en CUBEVALUE pour suivre les filtres.' },
+        { n: '03', title: 'Restitution', body: "Deux pages, Performance et Panier : cartes KPI avec flèches d'évolution, onze graphiques croisés et des segments origine / catégorie connectés à tous les visuels." },
+        { n: '04', title: 'Qualité', body: "Une page de contrôles : cohérence entre les deux tables, casse harmonisée sur l'origine de commande, catégories à surveiller (« NA », famille Nest répartie sur trois catégories)." }
+      ],
+      results: [
+        'Décembre 2017 : 3,43 M$ de ventes, +19 % par rapport à novembre.',
+        "Le canal offline porte 83 % des ventes de l'année, avec un panier moyen de 1 374 $ contre 189 $ en ligne.",
+        'Les deux tables concordent : écart nul sur les ventes (27,45 M$) comme sur les quantités (1 070 027 produits).'
+      ]
+    },
+    en: {
+      kicker: 'Personal project · Excel & Power Pivot',
+      title: 'E-commerce sales dashboard',
+      summary: 'An Excel dashboard over 41,742 orders and 233,210 sales lines: monthly performance, online / offline split, basket analysis and a data quality check.',
+      context: 'Tracking a year of activity (2017) for an online store selling Google merchandise: how sales move from one month to the next, what each channel (online / offline) and category weighs, and how the average basket behaves.',
+      steps: [
+        { n: '01', title: 'Modelling', body: 'Two tables — orders and order lines — joined on the transaction ID in the Power Pivot data model.' },
+        { n: '02', title: 'Indicators', body: 'Sales, online / offline share, average basket, products per order and month-on-month change, computed with CUBEVALUE so they follow the filters.' },
+        { n: '03', title: 'Delivery', body: 'Two pages, Performance and Basket: KPI cards with trend arrows, eleven pivot charts and origin / category slicers connected to every visual.' },
+        { n: '04', title: 'Quality', body: 'A checks page: consistency between the two tables, harmonised casing on order origin, categories to watch (“NA”, the Nest family split across three categories).' }
+      ],
+      results: [
+        'December 2017: $3.43M in sales, up 19% on November.',
+        'The offline channel accounts for 83% of annual sales, with an average basket of $1,374 against $189 online.',
+        'The two tables reconcile: zero gap on sales ($27.45M) and on quantities (1,070,027 products).'
+      ]
+    }
+  },
+  {
     id: 'modele',
     draft: true, // ← fiche modèle : copie-la, change l'id, remplis-la et retire cette ligne
     dashboard: { tool: 'Power BI', url: '' },
@@ -141,7 +184,7 @@ window.PROJECTS = [
   }
 ];
 
-window.FILTERS = ['Python', 'SQL', 'Power BI', 'Excel', 'Power Query', 'Streamlit', 'Machine Learning', 'LLM', 'Odoo'];
+window.FILTERS = ['Python', 'SQL', 'Power BI', 'Excel', 'Power Query', 'Power Pivot', 'Data quality', 'Streamlit', 'Machine Learning', 'LLM', 'Odoo'];
 
 /* 3. Textes de l'interface */
 window.T = {

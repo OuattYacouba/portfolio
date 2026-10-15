@@ -2,3 +2,7 @@
 .vercel
 node_modules/
 *.log
+
+# Notes de travail, gardées en local uniquement
+CLAUDE.md
+README.md

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yacouba Ouattara — Data Analyst · Business Intelligence</title>
+  <meta name="description" content="Portfolio de Yacouba Ouattara, Data Analyst orienté business et performance : Power BI, SQL, Python, machine learning et finance. Certifié AWS AI Practitioner. Disponible en CDI à partir d'octobre 2026.">
+  <meta name="author" content="Yacouba Ouattara">
+  <meta name="theme-color" content="#f3f2f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f1d1c" media="(prefers-color-scheme: dark)">
+
+  <!-- Partage LinkedIn / réseaux sociaux -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yacouba Ouattara — Data Analyst · Business Intelligence">
+  <meta property="og:description" content="Data Analyst orienté business et performance. Power BI, SQL, Python, ML, finance. Disponible en CDI à partir d'octobre 2026.">
+  <meta property="og:image" content="assets/portrait.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Thème appliqué avant l'affichage pour éviter un flash -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('yo-portfolio-theme');
+        var dark = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yacouba Ouattara",
+    "jobTitle": "Data Analyst",
+    "email": "mailto:ouattara.yacouba111@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Quincy-sous-Sénart", "postalCode": "91480", "addressCountry": "FR" },
+    "alumniOf": ["aivancity", "IAE Nancy", "Université Clermont Auvergne"],
+    "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "AWS Certified AI Practitioner (AIF-C01)", "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" } },
+    "knowsAbout": ["Data Analysis", "Business Intelligence", "Power BI", "SQL", "Python", "Machine Learning", "Financial Analysis"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <div class="wrap">
+    <header class="site-header" id="header">
+      <a class="brand" href="#/">Yacouba Ouattara</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#projets" data-i18n="navProjects">Projets</a>
+        <a href="#competences" data-i18n="navSkills">Compétences</a>
+        <a href="#parcours" data-i18n="navPath">Parcours</a>
+        <a href="#certifications" data-i18n="navCerts">Certifications</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="btn btn-ghost" id="themeToggle" aria-live="polite">☾ Nuit</button>
+        <button type="button" class="btn btn-ghost" id="langToggle" lang="en" aria-label="Switch to English">EN</button>
+        <a class="btn btn-secondary" id="cvHeader" href="assets/CV-Yacouba-Ouattara.pdf" download="Yacouba-Ouattara-CV.pdf" data-i18n="cv">CV (PDF)</a>
+      </div>
+    </header>
+
+    <!-- ═══════════ ACCUEIL ═══════════ -->
+    <main id="contenu">
+      <div id="home">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-dots" aria-hidden="true"></div>
+          <img class="portrait" src="assets/portrait.jpg" alt="Portrait de Yacouba Ouattara" width="150" height="193" fetchpriority="high">
+          <div class="hero-copy">
+            <p class="kicker" data-i18n="heroKicker"></p>
+            <h1 id="hero-title">Yacouba Ouattara</h1>
+            <p class="hero-lead" data-i18n="heroLead"></p>
+            <p class="hero-status" data-i18n="heroStatus"></p>
+            <a class="badge-cert" href="#certifications">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+              <span data-i18n="certBadge"></span>
+            </a>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projets" data-i18n="ctaProjects"></a>
+              <a class="btn btn-secondary" href="#contact" data-i18n="ctaContact"></a>
+              <a class="btn btn-ghost" data-link="github" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn btn-ghost" data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+          </div>
+          <div class="roles" id="roles" aria-hidden="true"></div>
+        </section>
+
+        <section class="section reveal" id="projets" aria-labelledby="projets-title">
+          <h2 class="section-title" id="projets-title" data-i18n="projectsTitle"></h2>
+          <p class="section-lead" data-i18n="projectsLead"></p>
+          <div class="filters">
+            <span class="overline" style="margin:0" data-i18n="filterLabel"></span>
+            <div class="filter-list" id="filters" role="group"></div>
+          </div>
+          <div class="grid-cards" id="projectList" aria-live="polite"></div>
+        </section>
+
+        <section class="section reveal" id="competences" aria-labelledby="competences-title">
+          <h2 class="section-title" id="competences-title" style="margin-bottom:34px" data-i18n="skillsTitle"></h2>
+          <div class="skills-grid" id="skills"></div>
+        </section>
+
+        <section class="section reveal" id="parcours" aria-labelledby="parcours-title">
+          <h2 class="section-title" id="parcours-title" style="margin-bottom:34px" data-i18n="pathTitle"></h2>
+          <div class="path-grid">
+            <div>
+              <h3 class="eyebrow" data-i18n="expTitle"></h3>
+              <div class="timeline" id="experience"></div>
+            </div>
+            <div>
+              <h3 class="eyebrow" data-i18n="eduTitle"></h3>
+              <div class="timeline" id="education"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="certifications" aria-labelledby="certifications-title">
+          <h2 class="section-title" id="certifications-title" data-i18n="certTitle"></h2>
+          <p class="section-lead" data-i18n="certLead"></p>
+          <div class="cert-grid" id="certs"></div>
+        </section>
+
+        <section class="section reveal" id="veille" aria-labelledby="veille-title" hidden>
+          <h2 class="section-title" id="veille-title" data-i18n="notesTitle"></h2>
+          <p class="section-lead" data-i18n="notesLead"></p>
+          <div class="grid-cards" id="notes"></div>
+        </section>
+
+        <section class="section reveal" id="contact" aria-labelledby="contact-title">
+          <h2 class="section-title" id="contact-title" data-i18n="contactTitle"></h2>
+          <p class="section-lead" data-i18n="contactLead"></p>
+          <div class="contact-grid">
+            <div>
+              <p class="overline">E-mail</p>
+              <a href="mailto:ouattara.yacouba111@gmail.com">ouattara.yacouba111@gmail.com</a>
+              <button type="button" class="copy-btn" id="copyMail" data-i18n="copy">Copier</button>
+            </div>
+            <div>
+              <p class="overline" data-i18n="phone"></p>
+              <a href="tel:+33605805579">06 05 80 55 79</a>
+            </div>
+            <div>
+              <p class="overline" data-i18n="location"></p>
+              <p class="value">Quincy-sous-Sénart, 91480</p>
+            </div>
+            <div data-wrap="linkedin">
+              <p class="overline">LinkedIn</p>
+              <a data-link="linkedin" data-label="true" href="#" target="_blank" rel="noopener"></a>
+            </div>
+            <div data-wrap="github">
+              <p class="overline">GitHub</p>
+              <a data-link="github" data-label="true" href="#" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+          <div class="cta-row" style="margin-top:40px">
+            <a class="btn btn-primary" href="mailto:ouattara.yacouba111@gmail.com?subject=Opportunit%C3%A9%20Data%20Analyst" data-i18n="ctaMail"></a>
+            <a class="btn btn-secondary" href="assets/CV-Yacouba-Ouattara.pdf" download="Yacouba-Ouattara-CV.pdf" data-i18n="cv"></a>
+          </div>
+        </section>
+      </div>
+
+      <!-- ═══════════ ÉTUDE DE CAS ═══════════ -->
+      <article id="case" class="case" hidden></article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Yacouba Ouattara — <span data-i18n="footer"></span></p>
+      <p><a href="#/" data-i18n="backTop">Haut de page ↑</a></p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p style="max-width:640px;margin:40px auto;padding:0 24px">Ce portfolio nécessite JavaScript. Contact : <a href="mailto:ouattara.yacouba111@gmail.com">ouattara.yacouba111@gmail.com</a> — <a href="assets/CV-Yacouba-Ouattara.pdf">télécharger le CV</a>.</p>
+  </noscript>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -184,7 +184,7 @@ window.PROJECTS = [
   }
 ];
 
-window.FILTERS = ['Python', 'SQL', 'Power BI', 'Excel', 'Power Query', 'Power Pivot', 'Data quality', 'Streamlit', 'Machine Learning', 'LLM', 'Odoo'];
+window.FILTERS = ['Python', 'SQL', 'Power BI', 'Looker Studio', 'Excel', 'Power Query', 'Power Pivot', 'Data quality', 'Marketing analytics', 'Streamlit', 'Machine Learning', 'LLM', 'Odoo'];
 
 /* 3. Textes de l'interface */
 window.T = {
@@ -214,6 +214,7 @@ window.T = {
     archTitle: 'Architecture des données',
     archLead: 'Les données passent par trois couches, du brut au prêt-à-analyser, stockées en Parquet, avant la restitution.',
     deliverables: 'Livrables', resultsTitle: 'Résultats', stackTitle: 'Stack',
+    glossaryTitle: 'Lexique des indicateurs', glossaryLead: 'Ce que mesure chaque KPI du rapport, comment il se calcule et comment le lire, avec la valeur 2024.',
     zoomHint: 'Cliquer pour agrandir', zoomOpen: 'Agrandir la capture', zoomClose: 'Fermer',
     zoomPrev: 'Capture précédente', zoomNext: 'Capture suivante', zoomIn: 'Taille réelle', zoomOut: "Ajuster à l'écran",
     dashboard: 'Voir le dashboard',
@@ -245,6 +246,7 @@ window.T = {
     archTitle: 'Data architecture',
     archLead: 'Data moves through three layers, from raw to analysis-ready, stored as Parquet, before delivery.',
     deliverables: 'Deliverables', resultsTitle: 'Outcomes', stackTitle: 'Stack',
+    glossaryTitle: 'KPI glossary', glossaryLead: 'What each KPI in the report measures, how it is calculated and how to read it, with the 2024 value.',
     zoomHint: 'Click to enlarge', zoomOpen: 'Enlarge the screenshot', zoomClose: 'Close',
     zoomPrev: 'Previous screenshot', zoomNext: 'Next screenshot', zoomIn: 'Actual size', zoomOut: 'Fit to screen',
     dashboard: 'Open the dashboard',

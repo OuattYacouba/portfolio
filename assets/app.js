@@ -158,6 +158,14 @@
       return '<div>' + cmyk(st.n) + '<h3>' + esc(st.title) + '</h3><p>' + esc(st.body) + '</p></div>';
     }).join('') + '</section>';
 
+    if (L.glossary && L.glossary.length) {
+      html += '<section class="case-section"><h2>' + esc(t('glossaryTitle')) + '</h2><p class="lead">' + esc(t('glossaryLead')) + '</p><dl class="glossary">' +
+        L.glossary.map(function (g) {
+          return '<div><dt>' + esc(g.term) + '</dt>' + (g.formula ? '<dd class="formula">' + esc(g.formula) + '</dd>' : '') +
+            '<dd>' + esc(g.def) + '</dd>' + (g.example ? '<dd class="example">' + esc(g.example) + '</dd>' : '') + '</div>';
+        }).join('') + '</dl></section>';
+    }
+
     if (p.hasPipeline) {
       html += '<section class="case-section"><h2>' + esc(t('archTitle')) + '</h2><p class="lead">' + esc(t('archLead')) + '</p><div class="pipeline">' +
         window.PIPELINE[state.lang].map(function (l) {

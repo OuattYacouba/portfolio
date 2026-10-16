@@ -10,6 +10,7 @@ Portfolio bilingue (français / anglais) qui présente mes projets data sous for
 
 | Projet | Outils |
 |---|---|
+| Analyse de sentiment des tweets aériens | Python, scikit-learn (TF-IDF), TextBlob, VADER, Streamlit — [application](https://airline-sentiment-oy.streamlit.app/) · [code](https://github.com/OuattYacouba/airline-sentiment) |
 | Pilotage de la performance et aide à la décision | Python, Pandas, Scikit-Learn, Streamlit, Plotly, LLM (Gemini) |
 | Automatisation du reporting financier | ERP Odoo, Excel avancé, Power Query |
 | Tableau de bord des ventes e-commerce | Excel, Power Pivot, modèle de données, CUBEVALUE |

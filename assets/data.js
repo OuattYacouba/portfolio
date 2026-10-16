@@ -210,6 +210,51 @@ window.PROJECTS = [
     }
   },
   {
+    id: 'sentiment-tweets',
+    dashboard: { tool: 'Streamlit', url: 'https://airline-sentiment-oy.streamlit.app/' },
+    repo: 'https://github.com/OuattYacouba/airline-sentiment',
+    tags: ['Python', 'Machine Learning', 'Streamlit', 'NLP'],
+    hasPipeline: false,
+    shots: ['projects/tweets-global.png', 'projects/tweets-modele.png', 'projects/tweets-scores.png', 'projects/tweets-nuage.png'],
+    stack: ['Python', 'Streamlit', 'scikit-learn', 'TF-IDF', 'TextBlob', 'VADER', 'Plotly', 'BERT (option)'],
+    fr: {
+      kicker: 'Master 2 Data Management · NLP',
+      title: 'Analyse de sentiment des tweets aériens',
+      summary: "Application Streamlit qui analyse 14 640 tweets adressés à six compagnies américaines : causes d'insatisfaction, comparaison lexiques / Machine Learning et simulateur de tweet.",
+      context: "Comprendre ce que les voyageurs reprochent aux compagnies aériennes à partir de leurs tweets, et mesurer quelle méthode reconnaît le mieux un sentiment : des lexiques prêts à l'emploi ou un modèle entraîné sur des tweets annotés par des humains.",
+      steps: [
+        { n: '01', title: 'Préparation', body: 'Nettoyage des tweets (mentions @compagnie et liens retirés), dates, scores de polarité et de subjectivité (TextBlob) et score VADER.' },
+        { n: '02', title: 'Modélisation', body: 'TF-IDF sur mots et paires de mots, régression logistique à classes rééquilibrées ; évaluation sur 2 928 tweets jamais vus.' },
+        { n: '03', title: 'Application', body: 'Tableau de bord Streamlit : filtres par compagnie, causes d’insatisfaction, matrice de confusion, expressions décisives et simulateur de tweet.' },
+        { n: '04', title: 'Mise en ligne', body: "Calculs mis en cache, dépendances figées et déploiement sur Streamlit Community Cloud ; BERT laissé en option locale pour tenir dans la mémoire de l'hébergement." }
+      ],
+      results: [
+        'Le modèle supervisé s’accorde à 79 % avec les annotations humaines (F1 macro 0,736), contre 45 % pour TextBlob et 49 % pour VADER.',
+        '« Still waiting for my bag, 3 hours after landing » : aucun mot négatif, score 0 pour les lexiques, plainte reconnue à 95 % par le modèle.',
+        'Garder les négations et rééquilibrer les classes a fait passer le F1 macro de 0,693 à 0,736.',
+        '63 % des tweets sont négatifs ; le service client est la première cause d’insatisfaction, devant les retards.'
+      ]
+    },
+    en: {
+      kicker: 'MSc Data Management · NLP',
+      title: 'Airline tweet sentiment analysis',
+      summary: 'A Streamlit app analysing 14,640 tweets sent to six US airlines: reasons for dissatisfaction, lexicons versus machine learning, and a tweet simulator.',
+      context: 'Understanding what travellers complain about from their tweets, and measuring which method recognises sentiment best: off-the-shelf lexicons or a model trained on tweets labelled by humans.',
+      steps: [
+        { n: '01', title: 'Preparation', body: 'Cleaned the tweets (airline @mentions and links removed), parsed dates, computed polarity and subjectivity (TextBlob) and VADER scores.' },
+        { n: '02', title: 'Modelling', body: 'TF-IDF on words and word pairs, class-balanced logistic regression; evaluated on 2,928 unseen tweets.' },
+        { n: '03', title: 'Application', body: 'Streamlit dashboard: airline filters, reasons for dissatisfaction, confusion matrix, most decisive phrases and a tweet simulator.' },
+        { n: '04', title: 'Deployment', body: 'Cached computations, pinned dependencies and deployment on Streamlit Community Cloud; BERT kept as a local option to fit the hosting memory.' }
+      ],
+      results: [
+        'The supervised model agrees with human labels 79% of the time (macro F1 0.736), against 45% for TextBlob and 49% for VADER.',
+        '“Still waiting for my bag, 3 hours after landing”: no negative word, a score of 0 from the lexicons, recognised as a complaint at 95% by the model.',
+        'Keeping negations and balancing the classes raised macro F1 from 0.693 to 0.736.',
+        '63% of tweets are negative; customer service is the leading complaint, ahead of delays.'
+      ]
+    }
+  },
+  {
     id: 'modele',
     draft: true, // ← fiche modèle : copie-la, change l'id, remplis-la et retire cette ligne
     dashboard: { tool: 'Power BI', url: '' },
@@ -247,7 +292,7 @@ window.PROJECTS = [
   }
 ];
 
-window.FILTERS = ['Python', 'SQL', 'Power BI', 'Looker Studio', 'Excel', 'Power Query', 'Power Pivot', 'Data quality', 'Marketing analytics', 'Streamlit', 'Machine Learning', 'LLM', 'Odoo'];
+window.FILTERS = ['Python', 'SQL', 'Power BI', 'Looker Studio', 'Excel', 'Power Query', 'Power Pivot', 'Data quality', 'Marketing analytics', 'Streamlit', 'Machine Learning', 'NLP', 'LLM', 'Odoo'];
 
 /* 3. Textes de l'interface */
 window.T = {
